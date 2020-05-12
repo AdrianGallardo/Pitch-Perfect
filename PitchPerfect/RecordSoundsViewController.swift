@@ -28,7 +28,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
   }
 
   @IBAction func recordAudio(_ sender: Any) {
-    configUI(.notRecording)
+    configUI(.recording)
     
     let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
     let recordingName = "recordedVoice.wav"
@@ -69,6 +69,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
     }
   }
   
+  //Configure UI to enable or disable record button.
   func configUI(_ recordingState: RecordingState){
     switch(recordingState) {
     case .recording:
