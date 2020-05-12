@@ -31,7 +31,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     
     enum PlayingState { case playing, notPlaying }
     
-    // MARK: Audio Functions
+    // MARK: - Audio Functions
     
     func setupAudio() {
         // initialize (recording) audio file
@@ -140,7 +140,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         }
     }
     
-    // MARK: UI Functions
+    // MARK: - UI Functions
 
     func configureUI(_ playState: PlayingState) {
         switch(playState) {
